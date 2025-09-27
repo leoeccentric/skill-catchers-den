@@ -2,41 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Placemon Design System - Pokémon-inspired bright and playful colors
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - bright and vibrant */
+    --background: 220 25% 97%;
+    --foreground: 232 15% 18%;
 
+    /* Electric Blue (Primary - like Pikachu's electricity) */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+
+    /* Grass Green (Secondary - like nature/grass type) */
+    --secondary: 142 76% 36%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Fire Red (Accent - like fire type) */
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Sunny Yellow (Warning/Success - like electric type) */
+    --warning: 45 93% 58%;
+    --warning-foreground: 232 15% 18%;
+
+    /* Card styling */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 232 15% 18%;
+    --card-glow: 217 91% 60% / 0.1;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Battle/Gaming UI */
+    --battle-bg: 220 25% 95%;
+    --victory: 142 76% 45%;
+    --defeat: 0 84% 60%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Muted colors */
+    --muted: 220 15% 93%;
+    --muted-foreground: 232 10% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Borders and inputs */
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 217 91% 60%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(142 76% 45%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 15% 97%) 100%);
+    --gradient-battle: linear-gradient(135deg, hsl(0 84% 60%) 0%, hsl(45 93% 58%) 100%);
+    --gradient-xp: linear-gradient(90deg, hsl(142 76% 45%) 0%, hsl(45 93% 58%) 100%);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Shadows and effects */
+    --shadow-card: 0 10px 30px -10px hsl(217 91% 60% / 0.15);
+    --shadow-battle: 0 20px 40px -15px hsl(0 84% 60% / 0.25);
+    --shadow-glow: 0 0 40px hsl(217 91% 70% / 0.4);
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Animation timings */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
