@@ -13,7 +13,8 @@ import {
   Target,
   TrendingUp,
   Flame,
-  Star
+  Star,
+  Users
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -23,28 +24,28 @@ const quickActions = [
     description: "Face mathematical challenges",
     icon: <Calculator className="h-6 w-6" />,
     color: "primary" as const,
-    path: "/aptitude"
+    path: "/practice"
   },
   {
     title: "Challenge Coding", 
     description: "Solve programming problems",
     icon: <Code className="h-6 w-6" />,
     color: "secondary" as const,
-    path: "/coding"
+    path: "/practice"
   },
   {
     title: "Logic Battle",
     description: "Test reasoning skills", 
     icon: <Brain className="h-6 w-6" />,
     color: "accent" as const,
-    path: "/logic"
+    path: "/practice"
   },
   {
     title: "Quiz Challenge",
     description: "Knowledge competitions",
     icon: <HelpCircle className="h-6 w-6" />,
     color: "warning" as const,
-    path: "/quiz"
+    path: "/practice"
   }
 ];
 
@@ -72,14 +73,24 @@ export default function Dashboard() {
             </Link>
             
             <div className="flex items-center gap-4">
-              <Button variant="ghost">
-                <Trophy className="h-4 w-4" />
-                Leaderboard
-              </Button>
-              <Button variant="ghost">
-                <Target className="h-4 w-4" />
-                Analytics
-              </Button>
+              <Link to="/leaderboard">
+                <Button variant="ghost">
+                  <Trophy className="h-4 w-4" />
+                  Leaderboard
+                </Button>
+              </Link>
+              <Link to="/topics">
+                <Button variant="ghost">
+                  <Target className="h-4 w-4" />
+                  Topics
+                </Button>
+              </Link>
+              <Link to="/students">
+                <Button variant="ghost">
+                  <Users className="h-4 w-4" />
+                  Student Dex
+                </Button>
+              </Link>
               <Button variant="pokeball">Profile</Button>
             </div>
           </div>
@@ -197,10 +208,12 @@ export default function Dashboard() {
           <div className="space-y-6">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold">Recent Battles</h2>
-              <Button variant="ghost" className="text-primary">
-                View All
-                <TrendingUp className="h-4 w-4" />
-              </Button>
+              <Link to="/practice">
+                <Button variant="ghost" className="text-primary">
+                  Start Practice
+                  <TrendingUp className="h-4 w-4" />
+                </Button>
+              </Link>
             </div>
             
             <div className="grid md:grid-cols-2 gap-4">
